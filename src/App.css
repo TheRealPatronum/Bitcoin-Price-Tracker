@@ -17,14 +17,14 @@
 .card {
   width: 20rem;
   height: 26rem;
-  max-width: 80vw;
+  max-width: 85vw;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   padding: 1rem 2rem;
   margin: 1rem;
 }
-.card Button {
+.btnRefresh {
   align-items: center;
   justify-content: center;
   margin-left: 30%;
@@ -43,4 +43,13 @@ h4 {
 .dropdown {
   align-items: center;
   justify-content: center;
+}
+
+.nameAndLogo {
+  display: flex;
+}
+
+.nameAndLogo img {
+  width: 10%;
+  height: 10%;
 }

@@ -41,16 +41,24 @@ export default function Crypto(props) {
       {value.data ? (
         <div>
           <h4>Name:</h4>
-          <p>{value.data.name}</p>
+          <div className='nameAndLogo'>
+            <p>{value.data.name}</p>
+            <img
+              src={`/../images/${value.data.id.toLowerCase()}.png`}
+              alt='test'
+            />
+          </div>
           <h4>Price:</h4>
           <p>{formatDollars(value.data.priceUsd)}</p>
           <h4>Change 24hrs:</h4>
           <p>{formatPercenct(value.data.changePercent24Hr)}%</p>
           <h4>Symbol:</h4>
           <p>{value.data.symbol}</p>
-          <Button variant='warning' onClick={refreschPrice}>
-            Refresh
-          </Button>
+          <div className='btnRefresh center'>
+            <Button variant='warning' onClick={refreschPrice}>
+              Refresh
+            </Button>
+          </div>
         </div>
       ) : (
         <div className='spins center'>
