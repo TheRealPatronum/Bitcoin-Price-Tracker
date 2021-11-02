@@ -2,6 +2,7 @@ export function formatDollars(amount) {
   let dollarUSA = Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
+    maximumFractionDigits: 10,
   });
   return dollarUSA.format(amount);
 }

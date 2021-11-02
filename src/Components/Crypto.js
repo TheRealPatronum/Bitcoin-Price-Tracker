@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { formatDollars, formatPercenct } from '../utils/format';
+import { Button, Spinner } from 'react-bootstrap';
 
 export default function Crypto(props) {
   const [value, setValue] = useState({});
@@ -20,6 +21,21 @@ export default function Crypto(props) {
       });
   }, [props.asset]);
 
+  const refreschPrice = () => {
+    axios
+      .get(baseUrl + props.asset)
+      .then((res) => {
+        setValue(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        console.log('Asset refreshed');
+      });
+  };
+
   return (
     <div>
       {value.data ? (
@@ -32,10 +48,16 @@ export default function Crypto(props) {
           <p>{formatPercenct(value.data.changePercent24Hr)}%</p>
           <h4>Symbol:</h4>
           <p>{value.data.symbol}</p>
+          <Button variant='warning' onClick={refreschPrice}>
+            Refresh
+          </Button>
         </div>
       ) : (
         <div>
-          <h1>Loading...</h1>
+          <Button variant='warning' onClick={refreschPrice}>
+            <Spinner animation='grow' as='span' size='sm' role='status' />
+            Loading...
+          </Button>
         </div>
       )}
     </div>
