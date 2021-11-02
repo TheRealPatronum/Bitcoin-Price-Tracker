@@ -1,9 +1,9 @@
 import React from 'react';
-import ContainerComponent from './Components/ContainerComponent';
-
+import ContainerComponent from './components/ContainerComponent';
+import './App.css';
 export default function App() {
   return (
-    <div>
+    <div className='App'>
       <ContainerComponent />
     </div>
   );

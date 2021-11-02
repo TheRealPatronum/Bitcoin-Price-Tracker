@@ -1,0 +1,46 @@
+.App {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: #333;
+  background-color: dodgerblue;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.card {
+  width: 20rem;
+  height: 26rem;
+  max-width: 80vw;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  margin: 1rem;
+}
+.card Button {
+  align-items: center;
+  justify-content: center;
+  margin-left: 30%;
+}
+h4 {
+  font-style: italic;
+  text-decoration: underline;
+}
+.spins {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50%;
+}
+
+.dropdown {
+  align-items: center;
+  justify-content: center;
+}

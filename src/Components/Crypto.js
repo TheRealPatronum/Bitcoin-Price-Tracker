@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { formatDollars, formatPercenct } from '../utils/format';
-import { Button, Spinner } from 'react-bootstrap';
+import { Button, Spinner, Card } from 'react-bootstrap';
 
 export default function Crypto(props) {
   const [value, setValue] = useState({});
@@ -37,7 +37,7 @@ export default function Crypto(props) {
   };
 
   return (
-    <div>
+    <Card>
       {value.data ? (
         <div>
           <h4>Name:</h4>
@@ -53,13 +53,13 @@ export default function Crypto(props) {
           </Button>
         </div>
       ) : (
-        <div>
+        <div className='spins center'>
           <Button variant='warning' onClick={refreschPrice}>
             <Spinner animation='grow' as='span' size='sm' role='status' />
             Loading...
           </Button>
         </div>
       )}
-    </div>
+    </Card>
   );
 }
