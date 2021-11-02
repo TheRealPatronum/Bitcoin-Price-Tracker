@@ -24,6 +24,11 @@
   padding: 1rem 2rem;
   margin: 1rem;
 }
+.card Button {
+  align-items: center;
+  justify-content: center;
+  margin-left: 30%;
+}
 h4 {
   font-style: italic;
   text-decoration: underline;
