@@ -44,7 +44,7 @@ export default function Crypto(props) {
           <div className='nameAndLogo'>
             <p>{value.data.name}</p>
             <img
-              src={`/../images/${value.data.id.toLowerCase()}.png`}
+              src={`./images/${value.data.id.toLowerCase()}.png`}
               alt='test'
             />
           </div>
